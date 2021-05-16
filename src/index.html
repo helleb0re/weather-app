@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/cloudy.svg" type="image/svg" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="title">Weather app</h1>
+        <form name="location-settings-form" class="location-settings__form">
+          <div class="location-settings__form-item">
+            <input
+              type="text"
+              class="location-settings__form-item-input"
+              id="city"
+              placeholder="Enter city"
+            />
+            <div class="warning__text"></div>
+          </div>
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="results">
+          <div class="results__btn-container">
+            <span class="results__btn-prev"></span>
+          </div>
+          <div class="results__slider">
+            <div class="results__slider-inner"></div>
+          </div>
+          <div class="results__btn-container">
+            <span class="results__btn-next"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
