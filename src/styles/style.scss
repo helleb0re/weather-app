@@ -27,7 +27,9 @@ html {
 
 body {
   margin: 0;
-  background-color: #485786;
+  background-color: rgb(34, 33, 33);
+
+  height: 100vh;
 }
 
 .container {
@@ -50,20 +52,28 @@ body {
   text-align: center;
   margin-bottom: 35px;
   font-weight: 700;
-  color: #61bdb7;
-  text-shadow: #000 1px 1px 0, #000 -1px -1px 0, #000 -1px 1px 0,
-    #000 1px -1px 0;
+  color: rgb(22, 185, 112);
+  // text-shadow: #000 1px 1px 0, #000 -1px -1px 0, #000 -1px 1px 0,
+  //   #000 1px -1px 0;
   @media (max-width: 750px) {
     font-size: 45px;
     margin-bottom: 15px;
   }
 }
 
+.main-img {
+  position: absolute;
+  max-width: 500px;
+  top: 5%;
+  left: 5%;
+  z-index: -5;
+}
+
 .btn {
-  border: 1px solid #000;
-  background-color: blueviolet;
-  padding: 5px;
-  border-radius: 10px;
+  border: none;
+  background-color: rgb(22, 185, 112);
+  border-radius: 5px;
+  padding: 8px;
   color: #fff;
   font-size: 1.3rem;
   opacity: 1;
@@ -92,19 +102,24 @@ body {
   }
 
   &-item {
-    height: 57px;
+    height: 70px;
+    @media (max-width: 750px) {
+      height: 57px;
+      margin-bottom: 3px;
+    }
   }
 
   &-item-input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgb(22, 185, 112);
     margin-right: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
-    color: #fff;
-    @media (max-width: 750px) {
-      font-size: 20px;
+    color: rgb(255, 255, 255);
+    @media (max-width: 500px) {
+      max-width: 230px;
+      font-size: 1.5rem;
     }
   }
 
@@ -113,7 +128,7 @@ body {
   }
 
   &-item-input::placeholder {
-    color: gray;
+    color: rgb(92, 92, 92);
   }
 }
 
@@ -170,14 +185,37 @@ body {
 
 .result {
   flex-shrink: 0;
-  background-color: #3c3f4a;
+  background: hsla(0, 0%, 0%, 1);
+
+  background: hsla(0, 0%, 0%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(146, 100%, 1%, 1) 0%,
+    hsla(146, 32%, 52%, 0.6) 91%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(146, 100%, 1%, 1) 0%,
+    hsla(146, 32%, 52%, 0.6) 91%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(146, 100%, 1%, 1) 0%,
+    hsla(146, 32%, 52%, 0.6) 91%
+  );
+
   width: 250px;
   height: 320px;
   border-radius: 10px;
   padding: 10px;
   font-size: 1.2rem;
   margin: 0 10px;
-  border: 2px solid;
 
   &__main-content {
     display: flex;
